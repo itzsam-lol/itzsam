@@ -1,224 +1,51 @@
-*{
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
-    box-sizing: border-box;
-
 }
-
-
-
-/****Particles Js -> css****/
-
-
-canvas {
-    display: block;
-    vertical-align: bottom;
-  }
-  
-  #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-      background: #2c2f33;
-  }
-
-
-
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-image: url();
-    background-position: center;
-    background-size: cover;
-    padding: 0 8%;
-
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
-.logo{
-    width: 120px;
-    padding: 20px 0;
-    cursor: pointer;
-
+h1 {
+    font-size: 36px;
 }
-.content{
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    color: #fff;
-
-}
-.content h1{
-    font-size: 64px;
-    font-weight: 600;
-}
-.content h1 span{
-    color:#ff3753;
-}
-.content button{
-    background: transparent;
-    border: 2px solid #fff;
-    outline: none;
-    padding: 12px 25px;
-    color: #fff;
+.countdown {
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    cursor: pointer;
-
 }
-.content button img{
-    width: 15px;
-    margin-left: 10px;
+.countdown-item {
+    margin: 0 10px;
+    font-size: 24px;
 }
-.launch-time{
-    display: flex;
+.countdown-number {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
-.launch-time div{
-    flex-basis: 200px;
-
+.footer {
+    background-color: #333;
+    padding: 10px 0;
 }
-.launch-time div p{
-    font-size: 60px;
-    margin-bottom: -4px;
-
+.copyright {
+    color: #fff;
 }
-.rocket{
-    width: 250px;
-    position: absolute;
-    right: 10%;
-    bottom: 0;
-    animation: rocket 4s linear infinite;
-
+.social {
+    margin-top: 10px;
 }
-@keyframes rocket{
-    0%{
-        bottom: 0;
-        opacity: 0;
-    }
-    100%{
-        bottom: 105%;
-        opacity: 1;
-    }
+.social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
-
-
-
-/*Preloader   */
-
-
-
-
-body {
-	background: #2c2f33;
-}
-
-
-.loader{
-    position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	width: 100%;
-	height: 100%;
-	background: #2c2f33;
-}
-
-.squares {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	width: 50px;
-	height: 50px;
-	animation: scale ease 1.4s infinite;
-}
-
-.squares::before {
-	content: '';
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background: #7289da;
-	top: -10px;
-	left: -10px;
-	animation: top ease 3s infinite;
-}
-
-.squares::after {
-	content: '';
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	background: #7289da;
-	bottom: -10px;
-	right: -10px;
-	animation: bottom ease 3s infinite;
-}
-
-@keyframes top{
-	0%{
-		top: -10px;
-	}
-	20%{
-		top: 100%;
-		left: -10px;
-	}
-	40%{
-		left: 100%;
-		top: 100%;
-		transform: rotate(180deg);
-	}
-	60%{
-		top: -10px;
-		left: 100%;
-	}
-	80%{
-		top: -10px;
-		transform: rotate(360deg);
-	}
-	100%{
-		left: -10px;
-	}
-}
-
-@keyframes bottom{
-	0%{
-		bottom: -10px;
-	}
-	20%{
-		bottom: 100%;
-		right: -10px;
-	}
-	40%{
-		right: 100%;
-		bottom: 100%;
-		transform: rotate(180deg);
-	}
-	60%{
-		bottom: -10px;
-		right: 100%;
-	}
-	80%{
-		bottom: -10px;
-		transform: rotate(360deg);
-	}
-	100%{
-		right: -10px;
-	}
-}
-
-@keyframes scale{
-	0%{
-		transform: scale(1);
-	}
-	50%{
-		transform: scale(0.7);
-	}
-	100%{
-		transform: scale(1);
-	}
+.social img {
+    width: 40px; /* Set the width as needed */
+    height: 40px; /* Set the height as needed */
 }
